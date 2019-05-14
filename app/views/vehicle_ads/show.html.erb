@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer name:</strong>
+  <%= @vehicle_ad.customer_name %>
+</p>
+
+<p>
+  <strong>Customer phone:</strong>
+  <%= @vehicle_ad.customer_phone %>
+</p>
+
+<p>
+  <strong>Customer message:</strong>
+  <%= @vehicle_ad.customer_message %>
+</p>
+
+<p>
+  <strong>Vehicle interest:</strong>
+  <%= @vehicle_ad.vehicle_interest %>
+</p>
+
+<p>
+  <strong>Ad link:</strong>
+  <%= @vehicle_ad.ad_link %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @vehicle_ad.brand %>
+</p>
+
+<p>
+  <strong>Model name:</strong>
+  <%= @vehicle_ad.model_name %>
+</p>
+
+<p>
+  <strong>Release year:</strong>
+  <%= @vehicle_ad.release_year %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @vehicle_ad.price %>
+</p>
+
+<p>
+  <strong>Mileage:</strong>
+  <%= @vehicle_ad.mileage %>
+</p>
+
+<p>
+  <strong>Accessories:</strong>
+  <%= @vehicle_ad.accessories %>
+</p>
+
+<%= link_to 'Edit', edit_vehicle_ad_path(@vehicle_ad) %> |
+<%= link_to 'Back', vehicle_ads_path %>
