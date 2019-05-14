@@ -1,3 +1,7 @@
+<% if notice.present? %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
 <h1>Faça o upload do arquivo de e-mail</h1>
 
 <%= form_with(url: import_path, multipart: true, class: "form-inline") do |form| %>
@@ -14,3 +18,46 @@
     </div>
   </div>
 <% end %>
+
+
+<h1>Vehicle Ads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome do cliente</th>
+      <th>Telefone do cliente</th>
+      <th>Mensagem do cliente</th>
+      <th>Veículo de interesse</th>
+      <th>Link do anúncio</th>
+      <th>Marca</th>
+      <th>Modelo do veículo</th>
+      <th>Ano</th>
+      <th>Preço</th>
+      <th>Km</th>
+      <th>Acessórios</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vehicle_ads.each do |vehicle_ad| %>
+      <tr>
+        <td><%= vehicle_ad.customer_name %></td>
+        <td><%= vehicle_ad.customer_phone %></td>
+        <td><%= vehicle_ad.customer_message %></td>
+        <td><%= vehicle_ad.vehicle_interest %></td>
+        <td><%= vehicle_ad.vehicle_ad_link %></td>
+        <td><%= vehicle_ad.vehicle_brand %></td>
+        <td><%= vehicle_ad.vehicle_model %></td>
+        <td><%= vehicle_ad.vehicle_release_year %></td>
+        <td><%= vehicle_ad.vehicle_price %></td>
+        <td><%= vehicle_ad.vehicle_mileage %></td>
+        <td><%= vehicle_ad.vehicle_accessories %></td>
+        <td><%= link_to 'Show', vehicle_ad %></td>
+        <td><%= link_to 'Edit', edit_vehicle_ad_path(vehicle_ad) %></td>
+        <td><%= link_to 'Destroy', vehicle_ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

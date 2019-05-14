@@ -61,10 +61,6 @@ class VehicleAdsController < ApplicationController
     end
   end
 
-  def import
-    doc = Nokogiri::HTML(open(params[:file].path))
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_vehicle_ad

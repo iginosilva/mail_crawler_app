@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_14_024119) do
+ActiveRecord::Schema.define(version: 2019_05_14_070201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,13 +20,13 @@ ActiveRecord::Schema.define(version: 2019_05_14_024119) do
     t.string "customer_phone"
     t.text "customer_message"
     t.string "vehicle_interest"
-    t.string "ad_link"
-    t.string "brand"
-    t.string "model_name"
-    t.string "release_year"
-    t.float "price"
-    t.string "mileage"
-    t.string "accessories", default: [], array: true
+    t.string "vehicle_ad_link"
+    t.string "vehicle_brand"
+    t.string "vehicle_model"
+    t.string "vehicle_release_year"
+    t.float "vehicle_price"
+    t.string "vehicle_mileage"
+    t.string "vehicle_accessories", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
