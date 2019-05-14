@@ -61,6 +61,10 @@ class VehicleAdsController < ApplicationController
     end
   end
 
+  def import
+    doc = Nokogiri::HTML(open(params[:file].path))
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_vehicle_ad
@@ -69,6 +73,6 @@ class VehicleAdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vehicle_ad_params
-      params.require(:vehicle_ad).permit(:customer_name, :customer_phone, :customer_message, :vehicle_interest, :ad_link, :brand, :model_name, :release_year, :price, :mileage, :accessories)
+      params.require(:vehicle_ad).permit(:customer_name, :customer_phone, :customer_message, :vehicle_interest, :ad_link, :brand, :model_name, :release_year, :price, :mileage, accessories: [])
     end
 end
